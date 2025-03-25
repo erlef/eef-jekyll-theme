@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+
+{% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1f2c34">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/eef.css?v=' | append: site.github.build_revision | relative_url }}">
+    <meta name="keywords" content="{{ page.seo_keywords | join: ", " }}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://erlef.org/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://erlef.org/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://erlef.org/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://erlef.org/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://erlef.org/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://erlef.org/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://erlef.org/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://erlef.org/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://erlef.org/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://erlef.org/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://erlef.org/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://erlef.org/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://erlef.org/images/favicon-16x16.png">
+  </head>
+  <body>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to the content.</a>
+
+    <nav class="navbar navbar-expand-md box-shadow navbar-light py-3">
+      <a class="navbar-brand" href="/">
+        <img src="https://erlef.org/images/eef-header-logo.svg" style="max-height:50px;max-width:50px;" alt="EEF Logo" >
+        {{ site.title | default: site.github.repository_name }}
+      </a>
+
+      <ul class="navbar-nav navbar-right ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://erlef.org">Foundation Website</a>
+        </li>
+      </ul>
+    </nav>
+
+    <article id="content" class="site-content bg-brand">
+      {{ content }}
+    </article>
+
+    {% include footer.html %}
+  </body>
+</html>
